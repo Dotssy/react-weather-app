@@ -1,0 +1,66 @@
+.weatherCard {
+	min-width: 295px;
+	height: 100%;
+	border-radius: 25px;
+	background: url(../../assets/background.jpg) center center;
+	position: relative;
+	transition: transform 300ms ease;
+	transform: translateZ(0) scale(1.02) perspective(1000px);
+	
+	&:hover {
+		transform: scale(1.1) perspective(1500px) rotateY(10deg);
+	}
+}
+
+.weatherGradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 25px;
+	background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+	opacity: 0.4;
+}
+
+.dateContainer {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+.dayName {
+	font-size: 1.5em;
+}
+
+.dateDay, .location  {
+	display: block;
+	margin-top: 5px;
+}
+
+.location svg {
+	font-size: 1.1em;
+	position: relative;
+	top: 3px;
+	margin-right: 3px;
+}
+
+.weatherContainer {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+}
+
+.weatherIcon svg {
+	font-size: 7em;
+	display: block;
+}
+
+.weatherTemp {
+	font-size: 4em;
+	font-weight: 700;
+}
+
+.weatherDesc {
+	font-size: 1.25em;
+}

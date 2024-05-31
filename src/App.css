@@ -1,0 +1,13 @@
+.app {
+  background-color: #222831;
+  position: relative;
+  width: 890px;
+  height: 400px;
+  border-radius: 25px;
+  -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}

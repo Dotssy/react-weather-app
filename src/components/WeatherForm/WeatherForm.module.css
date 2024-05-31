@@ -1,0 +1,45 @@
+.weatherForm {
+	display: flex;
+	margin-top: 35px;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+}
+
+.weatherForm input {
+	width: 100%;
+	padding: 10px;
+	font-size: 1em;
+	font-weight: 700;
+	outline: none;
+	color: #fff;
+	background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+	border-radius: 20px 0 0 20px;
+	transition: linear-gradient .3s ease;
+
+	&::placeholder {
+		font-weight: 400;
+		color: #fff;
+	}
+
+	&:focus {
+		background: linear-gradient(135deg, #5151E5 10%, #72EDF2 100%);
+	}
+}
+
+.weatherForm button {
+	padding: 10px;
+	width: 70px;
+	color: #fff;
+	font-size: 1em;
+	cursor: pointer;
+	background: #5151E5;
+	border-radius: 0 20px 20px 0;
+	transition: .3s ease;
+
+	&:hover {
+		background: #6464f3;
+	}
+
+	&:focus {
+		background: #7373fa;
+	}
+}

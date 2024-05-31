@@ -1,0 +1,26 @@
+.airConditions {
+	background-color: #262c35;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0);
+}
+
+.humidity, .wind {
+	display: flex;
+	justify-content: space-between;
+}
+
+.wind {
+	margin-top: 6px;
+}
+
+.title {
+	font-weight: 700;
+}
+
+.title svg {
+	position: relative;
+	top: 3px;
+	font-size: 1.2em;
+	margin-right: 5px;
+}

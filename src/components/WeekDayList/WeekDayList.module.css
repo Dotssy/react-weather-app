@@ -1,0 +1,39 @@
+.weekDayList {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 25px 15px;
+}
+
+.weekDayList li {
+	padding: 15px;
+	border-radius: 10px;
+	transition: 200ms ease;
+	width: 100%;
+
+	&:hover {
+		transform: scale(1.1);
+		background-color: rgb(226, 242, 255);
+		color: #222831;
+	}
+}
+
+.weekDayList li span {
+	width: 100%;
+	display: block;
+}
+
+.dayTemp {
+	font-weight: 700;
+	margin-top: 15px;
+}
+
+.dayIcon {
+	font-size: 4em;
+	position: relative;
+	top: 8px;
+	line-height: 0;
+}

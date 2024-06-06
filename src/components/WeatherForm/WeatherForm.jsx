@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { WeatherContext } from '../../context/WeatherContext';
 import styles from './WeatherForm.module.css';
@@ -6,6 +6,13 @@ import styles from './WeatherForm.module.css';
 const WeatherForm = () => {
   const [cityName, setCityName] = useState('');
   const { fetchWeatherData } = useContext(WeatherContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await fetchWeatherData('Moscow');
+    };
+    fetchData();
+  }, []);
 
   const handleOnChange = (e) => {
     setCityName(e.target.value);

@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
-import { IoIosSunny } from 'react-icons/io';
 import { WeatherContext } from '../../context/WeatherContext';
 import capitalize from '../../utils/capitalize';
 import getWeekDayName from '../../utils/getWeekDayName';
 import getDate from '../../utils/getDate';
+import selectWeatherIcon from '../../utils/selectWeatherIcon';
 import styles from './WeatherCard.module.css';
 
 const WeatherCard = () => {
@@ -15,7 +15,7 @@ const WeatherCard = () => {
       <div className={styles.weatherGradient}></div>
 
       {!Object.keys(weatherData).length ? (
-        <h4>Please enter city name</h4>
+        ''
       ) : (
         <>
           <div className={styles.dateContainer}>
@@ -30,7 +30,7 @@ const WeatherCard = () => {
           </div>
           <div className={styles.weatherContainer}>
             <span className={styles.weatherIcon}>
-              <IoIosSunny />
+              {selectWeatherIcon(weatherData.list[0].weather[0].id)}
             </span>
             <h1 className={styles.weatherTemp}>
               {Math.round(weatherData.list[0].main.temp) + 'ºC'}

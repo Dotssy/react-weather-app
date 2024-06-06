@@ -53,8 +53,6 @@ const WeatherContextProvider = (props) => {
     }
   };
 
-  console.log(weatherData);
-
   return (
     <WeatherContext.Provider value={{ weatherData, fetchWeatherData }}>
       {props.children}

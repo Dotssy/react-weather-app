@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { WeatherContext } from '../../context/WeatherContext';
 import getWeekDayName from '../../utils/getWeekDayName';
 import selectWeatherIcon from '../../utils/selectWeatherIcon';
@@ -22,12 +23,10 @@ const WeekDayList = () => {
 
     return sortedDayList.map((elem) => {
       return (
-        <li>
+        <li key={uuidv4()}>
           <span className={styles.dayName}>{getWeekDayName(elem.dt)}</span>
           <span className={styles.dayTemp}>
-            {`${Math.round(elem.main.temp_min)} º / ${Math.round(
-              elem.main.temp_max
-            )} º`}
+            {`${Math.round(elem.main.temp)} ºC`}
           </span>
           <span className={styles.dayIcon}>
             {selectWeatherIcon(elem.weather[0].id)}

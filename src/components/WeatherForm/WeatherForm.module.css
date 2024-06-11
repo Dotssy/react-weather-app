@@ -13,15 +13,11 @@
 	color: #fff;
 	background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
 	border-radius: 20px 0 0 20px;
-	transition: linear-gradient .3s ease;
+	z-index: 9999;
 
 	&::placeholder {
 		font-weight: 400;
 		color: #fff;
-	}
-
-	&:focus {
-		background: linear-gradient(135deg, #5151E5 10%, #72EDF2 100%);
 	}
 }
 

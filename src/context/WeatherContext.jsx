@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { apiKey } from '../api/apiKey';
 
 export const WeatherContext = createContext();
@@ -20,13 +21,13 @@ const WeatherContextProvider = (props) => {
       });
 
       if (!geoRes.data.length) {
-        console.log('Please enter a valid city name');
+        toast.warn('Please enter a valid city name');
         return;
       }
 
       return geoRes;
     } catch (error) {
-      console.log(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -49,7 +50,7 @@ const WeatherContextProvider = (props) => {
       });
       setWeatherData(weatherRes.data);
     } catch (error) {
-      console.log('Called: ', error.message);
+      toast.error(error.message);
     }
   };
 

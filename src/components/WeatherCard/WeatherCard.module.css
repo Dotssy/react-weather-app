@@ -64,3 +64,38 @@
 .weatherDesc {
 	font-size: 1.25em;
 }
+
+@media (max-width: 920px) {
+  .weatherCard {
+		width: 100%;
+		min-height: 370px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		pointer-events: none;
+	}
+
+	.dateContainer, .weatherContainer {
+		position: static;
+		z-index: 1;
+	}
+
+	.weatherIcon {
+		display: flex;
+		justify-content: center;
+	}
+
+	.dayName {
+		font-size: 2.5em;
+	}
+
+	.dateDay {
+		font-size: 1.4em;
+	}
+
+	.location {
+		font-size: 1.3em;
+	}
+}
